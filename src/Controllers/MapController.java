@@ -9,12 +9,11 @@ import Factories.TileFactory;
 import Models.Tile;
 
 public class MapController {
-    private Map map;
+    private Models.Map map;
     private List<String[]> mapData;
     private FileReaderController fileReaderController;
     private TileFactory tileCreation;
     private Tile[] tiles;
-
 
     public MapController(Models.Map map2) {
         this.map = map2;
@@ -26,7 +25,7 @@ public class MapController {
         mapData = fileReaderController.readCSV();
     }
 
-    public void createMap() {
+    public void createMap() throws FileNotFoundException {
 
         loadMapData();
         String[] mapDataArray = new String[mapData.size()];
@@ -43,7 +42,7 @@ public class MapController {
 
     }
 
-    public Map getMap() {
+    public Models.Map getMap() {
         return map;
     }
 }
