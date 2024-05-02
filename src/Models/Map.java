@@ -25,7 +25,7 @@ public class Map {
         int xCoord = tileLocation[0];
         int yCoord = tileLocation[1];
 
-        return tiles [xCoord][yCoord];
+        return tiles[xCoord][yCoord];
     }
 
     public Tile getRandomTile() {
