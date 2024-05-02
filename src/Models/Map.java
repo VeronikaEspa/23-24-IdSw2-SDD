@@ -25,14 +25,7 @@ public class Map {
         int xCoord = tileLocation[0];
         int yCoord = tileLocation[1];
 
-        for (int i = 0; i < tiles.getWidth(); i++) {
-            for (int j = 0; j < tiles.getHeight(); j++) {
-                if (i == xCoord && j == yCoord) {
-                    return tiles[i][j];
-                }
-            }
-        }
-        return null;
+        return tiles [xCoord][yCoord];
     }
 
     public Tile getRandomTile() {
